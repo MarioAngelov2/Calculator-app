@@ -16,7 +16,7 @@ body {
   height: 550px;
   padding: 20px;
   border-radius: 10px;
-  background-image: linear-gradient(to right top, #cbb5de, #cdb7df, #cfb9df, #d0bce0, #d2bee1);
+  background-image: linear-gradient(to right top, #cbcbcb, #c8c8c8, #c5c5c5, #c3c3c3, #c0c0c0);
 }
 
 .keypad {
@@ -29,7 +29,7 @@ button {
   cursor: pointer;
   width: 90px;
   height: 70px;
-  font-size: 22px;
+  font-size: 26px;
   font-family: sans-serif;
   border-radius: 5px;
   border: none;
@@ -37,7 +37,7 @@ button {
 }
 
 button:hover {
-  background-color: rebeccapurple;
+  background-color: rgb(122, 122, 122);
   color: white;
   transition: ease-in-out 0.2s;
 }
