@@ -1,36 +1,49 @@
-import React from 'react'
-import { useState } from 'react'
-import '../Style/Calculator.css'
+import React from "react";
+import { useState } from "react";
+import "../Style/Calculator.css";
 
 function Calculator() {
+  const [result, setResult] = useState("");
+
+    const onClickHandler = (ev) => {
+      setResult(result.concat(ev.target.name));
+
+    }
+
+    const clear = () => {
+      setResult('')
+    }
+
+    const calculate = () => {
+      setResult(eval(result).toString())
+    }
+
   return (
-    <div className='calculator'>
-      <div className='keypad'>
-      <button name='/'>/</button>
-        <button name='X'>X</button>
-        <button name='C'>C</button>
-        <button name='clear'>Clear</button>
-        <button name='8'>8</button>
-        <button name='9'>9</button>
-        <button name='7'>7</button>
-        <button name='+'>+</button>
-        <button name='4'>4</button>
-        <button name='5'>5</button>
-        <button name='6'>6</button>
-        <button name='-'>-</button>
-        <button name='1'>1</button>
-        <button name='2'>2</button>
-        <button name='3'>3</button>
-        <button name='='>=</button>
-        <button name='.'>.</button>
-        <button name='0'>0</button>
-        <button name='%'>%</button>
-       
-        
+    <div className="calculator">
+      <input name="text" value={result} />
+      <div className="keypad">
+        <button onClick={onClickHandler} name="/">/</button>
+        <button onClick={onClickHandler} name="*">*</button>
+        <button onClick={onClickHandler} name="C">C</button>
+        <button onClick={clear} name="clear">Clear</button>
+        <button onClick={onClickHandler} name="8">8</button>
+        <button onClick={onClickHandler} name="9">9</button>
+        <button onClick={onClickHandler} name="7">7</button>
+        <button onClick={onClickHandler} name="+">+</button>
+        <button onClick={onClickHandler} name="4">4</button>
+        <button onClick={onClickHandler} name="5">5</button>
+        <button onClick={onClickHandler} name="6">6</button>
+        <button onClick={onClickHandler} name="-">-</button>
+        <button onClick={onClickHandler} name="1">1</button>
+        <button onClick={onClickHandler} name="2">2</button>
+        <button onClick={onClickHandler} name="3">3</button>
+        <button onClick={calculate} name="=">=</button>
+        <button onClick={onClickHandler} name=".">.</button>
+        <button onClick={onClickHandler} name="0">0</button>
+        <button onClick={onClickHandler} name="%">%</button>
       </div>
-      
     </div>
-  )
+  );
 }
 
-export default Calculator
+export default Calculator;
