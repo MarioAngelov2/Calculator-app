@@ -10,7 +10,8 @@ function Calculator() {
     // setResult(result.concat(ev.target.name));
     const currentButtonClicked = ev.target.name
 
-    if (/[+\-*/%/.]/.test(currentButtonClicked) && lastButtonClicked === currentButtonClicked) {
+
+    if (/[+\-*/%/./=]/.test(currentButtonClicked) && lastButtonClicked === currentButtonClicked) {
       return;
     }
 
@@ -30,7 +31,8 @@ function Calculator() {
     try {
       setResult(eval(result).toString());
     } catch (error) {
-      setResult(error)
+      alert(error)
+      // setResult(error)
     }
   };
 
