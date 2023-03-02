@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 60vh;
+  background-color: whitesmoke;
 }
 
 .calculator {
@@ -11,11 +12,11 @@ body {
   align-items: center;
   margin-top: 20px;
   font-size: 24px;
-  width: 320px;
+  width: 420px;
+  height: 550px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #bfbfbf;
-  
+  background-image: linear-gradient(to right top, #cbb5de, #cdb7df, #cfb9df, #d0bce0, #d2bee1);
 }
 
 .keypad {
@@ -26,9 +27,10 @@ body {
 
 button {
   cursor: pointer;
-  width: 70px;
-  height: 50px;
-  font-size: 18px;
+  width: 90px;
+  height: 70px;
+  font-size: 22px;
+  font-family: sans-serif;
   border-radius: 5px;
   border: none;
   transition: ease-in-out 0.2s;
@@ -41,10 +43,11 @@ button:hover {
 }
 
 input {
-  margin-bottom: 10px;
-  width: 300px;
+  margin-top: 10px;
+  margin-bottom:50px;
+  width: 390px;
   height: 60px;
-  font-size: 24px;
+  font-size: 26px;
   text-align: right;
   border: none;
   border-radius: 5px;
