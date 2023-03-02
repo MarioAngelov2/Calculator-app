@@ -38,7 +38,7 @@ function Calculator() {
 
   return (
     <div className="calculator">
-      <input name="text" value={result} />
+      <input name="text" value={result} onChange={calculate} />
       <div className="keypad">
         <button onClick={onClickHandler} name="/">
           /
