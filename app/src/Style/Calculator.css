@@ -16,7 +16,7 @@ body {
   height: 550px;
   padding: 20px;
   border-radius: 10px;
-  background-image: linear-gradient(to right top, #cbcbcb, #c8c8c8, #c5c5c5, #c3c3c3, #c0c0c0);
+  background-color: rgb(200, 200, 200);
 }
 
 .keypad {
