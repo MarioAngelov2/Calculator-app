@@ -16,7 +16,7 @@ body {
   height: 550px;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(212, 212, 212);
 }
 
 .keypad {
@@ -34,10 +34,11 @@ button {
   border-radius: 5px;
   border: none;
   transition: ease-in-out 0.2s;
+  background-color:whitesmoke;
 }
 
 button:hover {
-  background-color: rgb(122, 122, 122);
+  background-color: rgb(157, 157, 157);
   color: white;
   transition: ease-in-out 0.2s;
 }
