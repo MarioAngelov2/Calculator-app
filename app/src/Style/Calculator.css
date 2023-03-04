@@ -36,6 +36,8 @@ button {
   transition: ease-in-out 0.2s;
   background-color:whitesmoke;
   color: black;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {
