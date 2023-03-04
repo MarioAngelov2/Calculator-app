@@ -35,6 +35,7 @@ button {
   border: none;
   transition: ease-in-out 0.2s;
   background-color:whitesmoke;
+  color: black;
 }
 
 button:hover {
@@ -64,4 +65,22 @@ input {
 
 .operators:hover {
   background-color: rgb(154, 67, 67);
+}
+
+/* Media query for small screens */
+@media (max-width: 576px) {
+  .calculator {
+    width: 80%;
+    height: auto;
+  }
+  
+  input {
+    width: 100%;
+  }
+  
+  button {
+    width: 70px;
+    height: 60px;
+    font-size: 20px;
+  }
 }
