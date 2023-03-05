@@ -3,11 +3,10 @@ import { useState } from "react";
 import "../Style/Calculator.css";
 
 function Calculator() {
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState("0");
   const [lastButtonClicked, setLastButtonClicked] = useState("");
 
   const onClickHandler = (ev) => {
-    // setResult(result.concat(ev.target.name));
     const currentButtonClicked = ev.target.name;
 
     if (
@@ -17,13 +16,20 @@ function Calculator() {
       return;
     }
 
-    setLastButtonClicked(currentButtonClicked);
-    setResult(result.concat(currentButtonClicked));
+   if (currentButtonClicked === clear) {
+      clear();
+   } else if (currentButtonClicked === clearOneDigit) {
+    clearOneDigit();
+   } else {
+    setResult(result  === 0 ? currentButtonClicked : result + currentButtonClicked)
+   }
 
+    // setLastButtonClicked(currentButtonClicked);
+    // setResult(result.concat(currentButtonClicked));
   };
 
   const clear = () => {
-    setResult("");
+    setResult("0");
   };
 
   const clearOneDigit = () => {
@@ -40,7 +46,15 @@ function Calculator() {
 
   return (
     <div className="calculator">
-      <input name="text" value={result} onChange={calculate} 
+      <input
+        name="text"
+        value={result}
+        onChange={calculate}
+        onFocus={(ev) => {
+          if (ev.target.value === 0) {
+            setResult("");
+          }
+        }}
       />
       <div className="keypad">
         <button className="operators" onClick={onClickHandler} name="/">
